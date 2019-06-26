@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <form>
+            <img id ="ball" src ="ball.jmg.jpg" height="640" width="640" />
+            <p>click button below to move the image to right</p>
+            <input type="button" value="Click Me" onclick="left();" />
+            <input type="button"  value ="Click Me" onclick="moveRight();"/>
+
+        </form>
+    <script>
+        let imgObj =null;
+            imgObj =document.getElementById('ball');
+        function init() {
+            imgObj = document.getElementById('ball');
+            imgObj.style.position = 'relative';
+            imgObj.style.left = '500px';
+        }
+
+        function moveRight() {
+            imgObj.style.left=parseInt(imgObj.style.left) + 10 + 'px';
+
+
+        }
+        function left (){
+            imgObj.style.left=parseInt(imgObj.style.left) - 10 + 'px';
+        }
+        window.onload= init;
+
+    </script>
+
+
+</body>
+</html>#"SS3_thuchanhsukienchuot")
